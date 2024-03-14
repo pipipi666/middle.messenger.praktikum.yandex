@@ -7,6 +7,8 @@ const pages = {
   chat: [Pages.ChatPage],
   login: [Pages.LoginPage],
   registration: [Pages.RegistrationPage],
+  "not-found": [Pages.NotFoundPage],
+  "server-error": [Pages.ServerErrorPage],
 };
 
 function navigate(page) {

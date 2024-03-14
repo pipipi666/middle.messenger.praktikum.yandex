@@ -1,16 +1,16 @@
-.input__wrapper {
+.input {
   display: flex;
   flex-direction: column;
   gap: 8px;
-}
 
-.input {
-  border: none;
-  border-bottom: 1px solid #3369f3;
-  outline: none;
-}
+  &__input {
+    border: none;
+    border-bottom: 1px solid var(--active-color);
+    outline: none;
+  }
 
-.label {
-  font-size: 9px;
-  color: #999999;
+  &__label {
+    font-size: 9px;
+    color: #999999;
+  }
 }
