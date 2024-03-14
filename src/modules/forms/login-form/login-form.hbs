@@ -1,0 +1,16 @@
+{{#> Dialog }}
+<form>
+    <h1>{{title}}</h1>
+    <div class="content">
+        <div class="inputs">
+              {{> @partial-block }}
+        </div>
+        <div class="buttons">
+            {{#> Button}}
+                {{btnText}}
+            {{/ Button}}
+            {{> Link url=linkUrl page=linkPage text=linkText }}
+        </div>
+    </div>
+</form>
+{{/ Dialog}}
