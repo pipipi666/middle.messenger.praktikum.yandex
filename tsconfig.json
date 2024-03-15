@@ -19,9 +19,7 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
 
-    "types": [
-      "node"
-    ]
+    "types": ["node"]
   },
-  "include": ["src"]
+  "include": ["src", "server.js"]
 }
