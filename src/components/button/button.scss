@@ -1,0 +1,23 @@
+.btn {
+  height: 36px;
+  font-size: 13px;
+
+  &-primary {
+    background-color: var(--active-color);
+    border-radius: 8px;
+    color: var(--text-light-color);
+  }
+
+  &-simple {
+    width: 100%;
+    color: var(--active-color);
+    background-color: unset;
+    border-bottom: var(--border);
+    border-radius: unset;
+    text-align: start;
+  }
+
+  &-error {
+    color: var(--error-color);
+  }
+}
