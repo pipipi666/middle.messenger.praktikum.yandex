@@ -5,14 +5,14 @@
     </div>
     <h2 class="profile-page__content__name">Иван</h2>
     <form class="profile-page__content__elements">
-        {{> Input type="email" label="Почта" row=true}}
-        {{> Input type="text" label="Логин" row=true}}
-        {{> Input type="text" label="Имя" row=true}}
-        {{> Input type="text" label="Фамилия" row=true}}
-        {{> Input type="text" label="Имя в чате" row=true}}
-        {{> Input type="tel" label="Телефон" row=true}}
-        {{> Input type="password" label="Старый пароль" row=true}}
-        {{> Input type="password" label="Новый пароль" row=true}}
+        {{> Input type="email" label="Почта" name="email" row=true}}
+        {{> Input type="text" label="Логин" name="login" row=true}}
+        {{> Input type="text" label="Имя" name="first_name" row=true}}
+        {{> Input type="text" label="Фамилия" name="second_name" row=true}}
+        {{> Input type="text" label="Имя в чате" name="display_name" row=true}}
+        {{> Input type="tel" label="Телефон" name="phone" row=true}}
+        {{> Input type="password" label="Старый пароль" name="oldPassword" row=true}}
+        {{> Input type="password" label="Новый пароль" name="newPassword" row=true}}
         {{> Input type="password" label="Повторите новый пароль" row=true}}
     </form>
     <div class="profile-page__content__elements">

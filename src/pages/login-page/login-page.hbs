@@ -1,4 +1,10 @@
-{{#> LoginForm title="Вход" btnText="Авторизоваться" linkUrl="registration" linkPage=RegistrationPage linkText="Нет аккаунта?"}}
-    {{> Input type="text" label="Логин"}}
-    {{> Input type="password" label="Пароль"}}
+{{#> LoginForm
+    title="Вход"
+    btnText="Авторизоваться"
+    linkUrl="registration"
+    linkPage=RegistrationPage
+    linkText="Нет аккаунта?"
+}}
+    {{> Input type="text" label="Логин" name="login"}}
+    {{> Input type="password" label="Пароль" name="password"}}
 {{/ LoginForm}}
