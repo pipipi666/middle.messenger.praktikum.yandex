@@ -27,6 +27,14 @@ a {
   text-decoration: inherit;
 }
 
+button {
+  border: none;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  cursor: pointer;
+}
+
 body {
   margin: 0;
   display: flex;

@@ -2,6 +2,7 @@ import Handlebars from "handlebars";
 import * as Pages from "./pages";
 import * as Components from "./components";
 import * as Modules from "./modules";
+import avatarIcon from "./assets/icons/avatar.svg";
 
 const pages = {
   chat: [Pages.ChatPage],
@@ -23,6 +24,12 @@ function navigate(page) {
     backButton.addEventListener("click", () => {
       history.back();
     });
+  }
+
+  const avatar = document.getElementById("avatar");
+
+  if (avatar) {
+    avatar.src = avatarIcon;
   }
 }
 
