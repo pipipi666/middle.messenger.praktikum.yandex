@@ -40,3 +40,8 @@ $ npm run start
 - Profile - [http://localhost:3000/profile](http://localhost:3000/profile)
 - 404 - [http://localhost:3000/not-found](http://localhost:3000/not-found)
 - 500 - [http://localhost:3000/error](http://localhost:3000/server-error)http://localhost:3000/server-error
+
+## PR
+
+[PR Sprint 1](https://github.com/pipipi666/middle.messenger.praktikum.yandex/pull/9)
+
