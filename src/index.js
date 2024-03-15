@@ -7,6 +7,7 @@ const pages = {
   chat: [Pages.ChatPage],
   login: [Pages.LoginPage],
   registration: [Pages.RegistrationPage],
+  profile: [Pages.ProfilePage],
   "not-found": [Pages.NotFoundPage],
   "server-error": [Pages.ServerErrorPage],
 };
@@ -15,6 +16,14 @@ function navigate(page) {
   const [source, args] = pages[page];
   const handlebarsFunc = Handlebars.compile(source);
   document.body.innerHTML = handlebarsFunc(args);
+
+  const backButton = document.getElementById("back_button");
+
+  if (backButton) {
+    backButton.addEventListener("click", () => {
+      history.back();
+    });
+  }
 }
 
 Object.entries(Components).forEach(([name, component]) => {

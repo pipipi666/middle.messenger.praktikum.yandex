@@ -1,0 +1,25 @@
+<div class="profile-page">
+  <main class="profile-page__content">
+    <div class="profile-page__content__avatar"></div>
+    <h2 class="profile-page__content__name">Иван</h2>
+    <form class="profile-page__content__elements">
+        {{> Input type="email" label="Почта" row=true}}
+        {{> Input type="text" label="Логин" row=true}}
+        {{> Input type="text" label="Имя" row=true}}
+        {{> Input type="text" label="Фамилия" row=true}}
+        {{> Input type="text" label="Имя в чате" row=true}}
+        {{> Input type="tel" label="Телефон" row=true}}
+        {{> Input type="password" label="Старый пароль" row=true}}
+        {{> Input type="password" label="Новый пароль" row=true}}
+        {{> Input type="password" label="Повторите новый пароль" row=true}}
+    </form>
+    <div class="profile-page__content__elements">
+        {{#> Button simple=true}}Изменить данные{{/ Button}}
+        {{#> Button simple=true}}Изменить пароль{{/ Button}}
+        {{#> Button simple=true error=true}}Выйти{{/ Button}}
+    </div>
+  </main>
+  <div class="profile-page__back">
+    <button class="profile-page__back__btn" id="back_button">←</button>
+  </div>
+</div>

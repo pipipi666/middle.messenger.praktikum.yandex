@@ -11,6 +11,27 @@
 
   &__label {
     font-size: 9px;
-    color: #999999;
+    color: var(--label-color);
+  }
+}
+
+.row {
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: var(--border);
+
+  .input {
+    &__input {
+      border: none;
+      color: var(--label-color);
+      text-align: end;
+    }
+
+    &__label {
+      font-size: 13px;
+      color: var(--text-color);
+    }
   }
 }
