@@ -1,0 +1,6 @@
+<button
+  class="btn {{#if simple}}btn-simple{{else}}btn-primary{{/if}}{{#if error}} btn-error{{/if}}"
+  @click="{{click}}"
+>
+  {{> @partial-block }}
+</button>

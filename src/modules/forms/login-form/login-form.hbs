@@ -1,0 +1,16 @@
+{{#> Dialog }}
+<form class="login-form"> 
+    <h1 class="login-form__title">{{title}}</h1>
+    <div class="login-form__content">
+        <div class="login-form__content__inputs">
+              {{> @partial-block }}
+        </div>
+        <div class="login-form__content__buttons">
+            {{#> Button}}
+                {{btnText}}
+            {{/ Button}}
+            {{> Link url=linkUrl page=linkPage text=linkText }}
+        </div>
+    </div>
+</form>
+{{/ Dialog}}

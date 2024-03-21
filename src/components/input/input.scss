@@ -1,0 +1,37 @@
+.input {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  &__input {
+    border: none;
+    border-bottom: 1px solid var(--active-color);
+    outline: none;
+  }
+
+  &__label {
+    font-size: 9px;
+    color: var(--label-color);
+  }
+}
+
+.row {
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: var(--border);
+
+  .input {
+    &__input {
+      border: none;
+      color: var(--label-color);
+      text-align: end;
+    }
+
+    &__label {
+      font-size: 13px;
+      color: var(--text-color);
+    }
+  }
+}

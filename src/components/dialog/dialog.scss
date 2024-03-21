@@ -1,0 +1,23 @@
+.dialog {
+  height: 100vh;
+  width: 100vw;
+  overflow: auto;
+
+  &__block {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    overflow: auto;
+  }
+
+  &__content {
+    width: 340px;
+    min-height: 450px;
+    display: flex;
+    padding: 50px 30px 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 6px 0 rgba($color: #000000, $alpha: 0.14);
+  }
+}
