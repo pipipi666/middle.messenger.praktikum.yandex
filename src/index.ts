@@ -4,7 +4,11 @@ import * as Components from "./components";
 import * as Modules from "./modules";
 import avatarIcon from "./assets/icons/avatar.svg";
 
-const pages = {
+type TPages = {
+  [name: string]: String[];
+};
+
+const pages: TPages = {
   chat: [Pages.ChatPage],
   login: [Pages.LoginPage],
   registration: [Pages.RegistrationPage],
@@ -13,7 +17,7 @@ const pages = {
   "server-error": [Pages.ServerErrorPage],
 };
 
-function navigate(page) {
+function navigate(page: string) {
   const [source, args] = pages[page];
   const handlebarsFunc = Handlebars.compile(source);
   document.body.innerHTML = handlebarsFunc(args);
@@ -28,7 +32,7 @@ function navigate(page) {
 
   const avatar = document.getElementById("avatar");
 
-  if (avatar) {
+  if (avatar instanceof HTMLImageElement) {
     avatar.src = avatarIcon;
   }
 }
@@ -46,7 +50,9 @@ document.addEventListener("DOMContentLoaded", (e) => {
 });
 
 document.addEventListener("click", (e) => {
-  const page = e.target.getAttribute("page");
+  const target = e.target;
+  const page =
+    target instanceof HTMLElement ? target.getAttribute("page") : null;
 
   if (page) {
     navigate(page);
