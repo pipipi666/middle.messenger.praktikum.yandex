@@ -1,2 +1,2 @@
 export { LoginForm } from "./forms";
-export { Error } from "./error";
+export { ErrorBlock } from "./error";

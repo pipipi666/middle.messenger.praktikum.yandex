@@ -1,3 +1,4 @@
+//@ts-nocheck
 import Handlebars from "handlebars";
 import * as Pages from "./pages";
 import * as Components from "./components";
@@ -9,18 +10,18 @@ type TPages = {
 };
 
 const pages: TPages = {
-  chat: [Pages.ChatPage],
-  login: [Pages.LoginPage],
-  registration: [Pages.RegistrationPage],
-  profile: [Pages.ProfilePage],
-  "not-found": [Pages.NotFoundPage],
-  "server-error": [Pages.ServerErrorPage],
+  chat: Pages.ChatPage,
+  login: Pages.LoginPage,
+  registration: Pages.RegistrationPage,
+  profile: Pages.ProfilePage,
+  "not-found": Pages.NotFoundPage,
+  "server-error": Pages.ServerErrorPage,
 };
 
 function navigate(page: string) {
-  const [source, args] = pages[page];
-  const handlebarsFunc = Handlebars.compile(source);
-  document.body.innerHTML = handlebarsFunc(args);
+  const block = new pages[page]({ buttonText: "Button" });
+  const container = document.getElementById("app")!;
+  container.append(block.getContent()!);
 
   const backButton = document.getElementById("back_button");
 
@@ -37,13 +38,13 @@ function navigate(page: string) {
   }
 }
 
-Object.entries(Components).forEach(([name, component]) => {
-  Handlebars.registerPartial(name, component);
-});
+// Object.entries(Components).forEach(([name, component]) => {
+//   Handlebars.registerPartial(name, component);
+// });
 
-Object.entries(Modules).forEach(([name, component]) => {
-  Handlebars.registerPartial(name, component);
-});
+// Object.entries(Modules).forEach(([name, component]) => {
+//   Handlebars.registerPartial(name, component);
+// });
 
 document.addEventListener("DOMContentLoaded", (e) => {
   navigate(document.location.pathname.replace("/", "") || "login");
