@@ -1,4 +1,30 @@
-<div>
-  <p>chat page</p>
-  {{{input}}}
+<div class="chat-page">
+  <div class="chat-page__chats">
+    <div class="chat-page__chats__search">
+      {{{link}}}
+      {{{input}}}
+    </div>
+    <div class="chat-page__chats__chats">
+      {{{chats}}}
+    </div>
+  </div>
+  <div class="chat-page__main">
+    <div class="chat-page__main__header">
+      <div class="chat-page__main__header-left">
+        <div class="chat-page__main__avatar"></div>
+        <div class="chat-page__main__name">{{{name}}}</div>
+      </div>
+    </div>
+    <div class="chat-page__main__messages">
+      {{{messages}}}
+    </div>
+    <div class="chat-page__main__message">
+      <input
+        class="chat-page__main__message__input"
+        type="text"
+        placeholder="Сообщение"
+      />
+      <button class="chat-page__main__message__btn">→</button>
+    </div>
+  </div>
 </div>
